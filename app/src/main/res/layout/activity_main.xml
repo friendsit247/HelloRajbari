@@ -509,7 +509,7 @@
                         android:onClick="electricityClick"
                         android:src="@drawable/electricity"
                         tools:ignore="SpeakableTextPresentCheck" />
-t
+
                     <TextView
                         android:id="@+id/textElectricity"
                         android:layout_width="match_parent"
