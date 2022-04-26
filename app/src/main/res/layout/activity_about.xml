@@ -45,6 +45,6 @@
         android:textAllCaps="false"
         android:text="Admin LogIn"
         android:layout_marginHorizontal="30dp"
-        android:onClick="logIn';.Click"/>
+        android:onClick="logInClick"/>
 
 </LinearLayout>

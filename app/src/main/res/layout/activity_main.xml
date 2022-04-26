@@ -112,6 +112,7 @@
                         android:layout_above="@+id/textPolice"
                         android:layout_alignParentTop="true"
                         android:onClick="policeClick"
+                        android:src="@drawable/police"
                         tools:ignore="SpeakableTextPresentCheck" />
 
                     <TextView
@@ -466,6 +467,7 @@
                         android:layout_above="@+id/textRentCar"
                         android:layout_alignParentTop="true"
                         android:onClick="rentACarClick"
+                        android:src="@drawable/rentcar"
                         tools:ignore="SpeakableTextPresentCheck" />
 
                     <TextView
@@ -545,6 +547,7 @@ t
                         android:layout_above="@+id/textRestaurants"
                         android:layout_alignParentTop="true"
                         android:onClick="aboutUsClick"
+                        android:src="@drawable/aboutus"
                         tools:ignore="SpeakableTextPresentCheck" />
 
                     <TextView
