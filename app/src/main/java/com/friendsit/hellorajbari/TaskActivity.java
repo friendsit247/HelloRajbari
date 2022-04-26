@@ -36,7 +36,6 @@ public class TaskActivity extends AppCompatActivity {
         if (State.equals("au")){
             taskSv.setVisibility(View.GONE);
             adminLay.setVisibility(View.VISIBLE);
-            tv.setVisibility(View.GONE);
         }
     }
 
