@@ -89,6 +89,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void aboutUsClick(View view) {
-        startActivity(new Intent(MainActivity.this,AboutActivity.class));
+        Intent intent = new Intent(MainActivity.this,TaskActivity.class);
+        intent.putExtra("State","au");
+        startActivity(intent);
     }
 }
