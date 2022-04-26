@@ -368,6 +368,7 @@
                         android:layout_above="@+id/textTourist"
                         android:layout_alignParentTop="true"
                         android:onClick="touristSpotClick"
+                        android:src="@drawable/tour"
                         tools:ignore="SpeakableTextPresentCheck" />
 
                     <TextView
