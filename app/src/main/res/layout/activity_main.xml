@@ -72,6 +72,7 @@
                         android:layout_above="@+id/textGovt"
                         android:layout_alignParentTop="true"
                         android:onClick="govtOfficeClick"
+                        android:src="@drawable/govt"
                         tools:ignore="SpeakableTextPresentCheck" />
 
                     <TextView
@@ -150,6 +151,7 @@
                         android:layout_above="@+id/textHospital"
                         android:layout_alignParentTop="true"
                         android:onClick="hospitalClick"
+                        android:src="@drawable/hospital"
                         tools:ignore="SpeakableTextPresentCheck" />
 
                     <TextView
@@ -201,6 +203,7 @@
                         android:layout_above="@+id/textFire"
                         android:layout_alignParentTop="true"
                         android:onClick="fireServiceClick"
+                        android:src="@drawable/fireservices"
                         tools:ignore="SpeakableTextPresentCheck" />
 
                     <TextView
@@ -240,6 +243,7 @@
                         android:layout_above="@+id/textAmbulance"
                         android:layout_alignParentTop="true"
                         android:onClick="ambulanceClick"
+                        android:src="@drawable/ambulance"
                         tools:ignore="SpeakableTextPresentCheck" />
 
                     <TextView
@@ -279,6 +283,7 @@
                         android:layout_above="@+id/textDoctors"
                         android:layout_alignParentTop="true"
                         android:onClick="doctorsClick"
+                        android:src="@drawable/doctors"
                         tools:ignore="SpeakableTextPresentCheck" />
 
                     <TextView
@@ -329,6 +334,7 @@
                         android:layout_above="@+id/textBlood"
                         android:layout_alignParentTop="true"
                         android:onClick="bloodDonorsClick"
+                        android:src="@drawable/blood"
                         tools:ignore="SpeakableTextPresentCheck" />
 
                     <TextView
@@ -408,6 +414,7 @@
                         android:layout_above="@+id/textHotel"
                         android:layout_alignParentTop="true"
                         android:onClick="hotelsClick"
+                        android:src="@drawable/hotel"
                         tools:ignore="SpeakableTextPresentCheck" />
 
                     <TextView
@@ -498,8 +505,9 @@
                         android:layout_above="@+id/textElectricity"
                         android:layout_alignParentTop="true"
                         android:onClick="electricityClick"
+                        android:src="@drawable/electricity"
                         tools:ignore="SpeakableTextPresentCheck" />
-
+t
                     <TextView
                         android:id="@+id/textElectricity"
                         android:layout_width="match_parent"
