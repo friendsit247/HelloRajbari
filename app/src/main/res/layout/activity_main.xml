@@ -65,13 +65,15 @@
                     android:layout_height="match_parent"
                     android:orientation="vertical">
 
-                    <ImageButton
+                    <ImageView
                         android:id="@+id/logoGovt"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_above="@+id/textGovt"
                         android:layout_alignParentTop="true"
+                        android:background="@drawable/pressed_selector"
                         android:onClick="govtOfficeClick"
+                        android:padding="15dp"
                         android:src="@drawable/govt"
                         tools:ignore="SpeakableTextPresentCheck" />
 
@@ -105,13 +107,15 @@
                     android:layout_height="match_parent"
                     android:orientation="vertical">
 
-                    <ImageButton
+                    <ImageView
                         android:id="@+id/logoPolice"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_above="@+id/textPolice"
                         android:layout_alignParentTop="true"
+                        android:background="@drawable/pressed_selector"
                         android:onClick="policeClick"
+                        android:padding="15dp"
                         android:src="@drawable/police"
                         tools:ignore="SpeakableTextPresentCheck" />
 
@@ -145,13 +149,15 @@
                     android:layout_height="match_parent"
                     android:orientation="vertical">
 
-                    <ImageButton
+                    <ImageView
                         android:id="@+id/logoHospital"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_above="@+id/textHospital"
                         android:layout_alignParentTop="true"
+                        android:background="@drawable/pressed_selector"
                         android:onClick="hospitalClick"
+                        android:padding="15dp"
                         android:src="@drawable/hospital"
                         tools:ignore="SpeakableTextPresentCheck" />
 
@@ -197,13 +203,15 @@
                     android:layout_height="match_parent"
                     android:orientation="vertical">
 
-                    <ImageButton
+                    <ImageView
                         android:id="@+id/logoFire"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_above="@+id/textFire"
                         android:layout_alignParentTop="true"
+                        android:background="@drawable/pressed_selector"
                         android:onClick="fireServiceClick"
+                        android:padding="15dp"
                         android:src="@drawable/fireservices"
                         tools:ignore="SpeakableTextPresentCheck" />
 
@@ -237,13 +245,15 @@
                     android:layout_height="match_parent"
                     android:orientation="vertical">
 
-                    <ImageButton
+                    <ImageView
                         android:id="@+id/logoAmbulance"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_above="@+id/textAmbulance"
                         android:layout_alignParentTop="true"
+                        android:background="@drawable/pressed_selector"
                         android:onClick="ambulanceClick"
+                        android:padding="15dp"
                         android:src="@drawable/ambulance"
                         tools:ignore="SpeakableTextPresentCheck" />
 
@@ -277,13 +287,15 @@
                     android:layout_height="match_parent"
                     android:orientation="vertical">
 
-                    <ImageButton
+                    <ImageView
                         android:id="@+id/logoDoctors"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_above="@+id/textDoctors"
                         android:layout_alignParentTop="true"
+                        android:background="@drawable/pressed_selector"
                         android:onClick="doctorsClick"
+                        android:padding="15dp"
                         android:src="@drawable/doctors"
                         tools:ignore="SpeakableTextPresentCheck" />
 
@@ -328,13 +340,15 @@
                     android:layout_height="match_parent"
                     android:orientation="vertical">
 
-                    <ImageButton
+                    <ImageView
                         android:id="@+id/logoBlood"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_above="@+id/textBlood"
                         android:layout_alignParentTop="true"
+                        android:background="@drawable/pressed_selector"
                         android:onClick="bloodDonorsClick"
+                        android:padding="15dp"
                         android:src="@drawable/blood"
                         tools:ignore="SpeakableTextPresentCheck" />
 
@@ -368,13 +382,15 @@
                     android:layout_height="match_parent"
                     android:orientation="vertical">
 
-                    <ImageButton
+                    <ImageView
                         android:id="@+id/logoTourist"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_above="@+id/textTourist"
                         android:layout_alignParentTop="true"
+                        android:background="@drawable/pressed_selector"
                         android:onClick="touristSpotClick"
+                        android:padding="15dp"
                         android:src="@drawable/tour"
                         tools:ignore="SpeakableTextPresentCheck" />
 
@@ -408,13 +424,15 @@
                     android:layout_height="match_parent"
                     android:orientation="vertical">
 
-                    <ImageButton
+                    <ImageView
                         android:id="@+id/logoHotel"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_above="@+id/textHotel"
                         android:layout_alignParentTop="true"
+                        android:background="@drawable/pressed_selector"
                         android:onClick="hotelsClick"
+                        android:padding="15dp"
                         android:src="@drawable/hotel"
                         tools:ignore="SpeakableTextPresentCheck" />
 
@@ -460,13 +478,15 @@
                     android:layout_height="match_parent"
                     android:orientation="vertical">
 
-                    <ImageButton
+                    <ImageView
                         android:id="@+id/logoRentCar"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_above="@+id/textRentCar"
                         android:layout_alignParentTop="true"
+                        android:background="@drawable/pressed_selector"
                         android:onClick="rentACarClick"
+                        android:padding="15dp"
                         android:src="@drawable/rentcar"
                         tools:ignore="SpeakableTextPresentCheck" />
 
@@ -500,13 +520,15 @@
                     android:layout_height="match_parent"
                     android:orientation="vertical">
 
-                    <ImageButton
+                    <ImageView
                         android:id="@+id/logoElectricity"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_above="@+id/textElectricity"
                         android:layout_alignParentTop="true"
+                        android:background="@drawable/pressed_selector"
                         android:onClick="electricityClick"
+                        android:padding="15dp"
                         android:src="@drawable/electricity"
                         tools:ignore="SpeakableTextPresentCheck" />
 
@@ -540,13 +562,15 @@
                     android:layout_height="match_parent"
                     android:orientation="vertical">
 
-                    <ImageButton
+                    <ImageView
                         android:id="@+id/logoRestaurants"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_above="@+id/textRestaurants"
                         android:layout_alignParentTop="true"
+                        android:background="@drawable/pressed_selector"
                         android:onClick="aboutUsClick"
+                        android:padding="15dp"
                         android:src="@drawable/aboutus"
                         tools:ignore="SpeakableTextPresentCheck" />
 
