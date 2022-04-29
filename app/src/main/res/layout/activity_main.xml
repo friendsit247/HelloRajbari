@@ -42,7 +42,8 @@
         android:layout_below="@+id/homeSearch"
         android:layout_alignParentBottom="true"
         android:orientation="vertical"
-        android:weightSum="4">
+        android:weightSum="4"
+        android:padding="5dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -63,7 +64,8 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:paddingBottom="5dp">
 
                     <ImageView
                         android:id="@+id/logoGovt"
@@ -73,7 +75,7 @@
                         android:layout_alignParentTop="true"
                         android:background="@drawable/pressed_selector"
                         android:onClick="govtOfficeClick"
-                        android:padding="15dp"
+                        android:padding="10dp"
                         android:src="@drawable/govt"
                         tools:ignore="SpeakableTextPresentCheck" />
 
@@ -85,7 +87,7 @@
                         android:layout_marginBottom="4dp"
                         android:text="Govt Office"
                         android:textAlignment="center"
-                        android:textSize="18dp"
+                        android:textSize="17dp"
                         android:textStyle="bold" />
 
                 </RelativeLayout>
@@ -105,7 +107,8 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:paddingBottom="5dp">
 
                     <ImageView
                         android:id="@+id/logoPolice"
@@ -115,7 +118,7 @@
                         android:layout_alignParentTop="true"
                         android:background="@drawable/pressed_selector"
                         android:onClick="policeClick"
-                        android:padding="15dp"
+                        android:padding="10dp"
                         android:src="@drawable/police"
                         tools:ignore="SpeakableTextPresentCheck" />
 
@@ -127,7 +130,7 @@
                         android:layout_marginBottom="4dp"
                         android:text="Police"
                         android:textAlignment="center"
-                        android:textSize="18dp"
+                        android:textSize="17dp"
                         android:textStyle="bold" />
 
                 </RelativeLayout>
@@ -147,7 +150,8 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:paddingBottom="5dp">
 
                     <ImageView
                         android:id="@+id/logoHospital"
@@ -157,7 +161,7 @@
                         android:layout_alignParentTop="true"
                         android:background="@drawable/pressed_selector"
                         android:onClick="hospitalClick"
-                        android:padding="15dp"
+                        android:padding="10dp"
                         android:src="@drawable/hospital"
                         tools:ignore="SpeakableTextPresentCheck" />
 
@@ -169,7 +173,7 @@
                         android:layout_marginBottom="4dp"
                         android:text="Hospital"
                         android:textAlignment="center"
-                        android:textSize="18dp"
+                        android:textSize="17dp"
                         android:textStyle="bold" />
 
                 </RelativeLayout>
@@ -201,7 +205,8 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:paddingBottom="5dp">
 
                     <ImageView
                         android:id="@+id/logoFire"
@@ -211,7 +216,7 @@
                         android:layout_alignParentTop="true"
                         android:background="@drawable/pressed_selector"
                         android:onClick="fireServiceClick"
-                        android:padding="15dp"
+                        android:padding="10dp"
                         android:src="@drawable/fireservices"
                         tools:ignore="SpeakableTextPresentCheck" />
 
@@ -223,7 +228,7 @@
                         android:layout_marginBottom="4dp"
                         android:text="Fire Service"
                         android:textAlignment="center"
-                        android:textSize="18dp"
+                        android:textSize="17dp"
                         android:textStyle="bold" />
 
                 </RelativeLayout>
@@ -243,7 +248,8 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:paddingBottom="5dp">
 
                     <ImageView
                         android:id="@+id/logoAmbulance"
@@ -253,7 +259,7 @@
                         android:layout_alignParentTop="true"
                         android:background="@drawable/pressed_selector"
                         android:onClick="ambulanceClick"
-                        android:padding="15dp"
+                        android:padding="10dp"
                         android:src="@drawable/ambulance"
                         tools:ignore="SpeakableTextPresentCheck" />
 
@@ -265,7 +271,7 @@
                         android:layout_marginBottom="4dp"
                         android:text="Ambulance"
                         android:textAlignment="center"
-                        android:textSize="18dp"
+                        android:textSize="17dp"
                         android:textStyle="bold" />
 
                 </RelativeLayout>
@@ -285,7 +291,8 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:paddingBottom="5dp">
 
                     <ImageView
                         android:id="@+id/logoDoctors"
@@ -295,7 +302,7 @@
                         android:layout_alignParentTop="true"
                         android:background="@drawable/pressed_selector"
                         android:onClick="doctorsClick"
-                        android:padding="15dp"
+                        android:padding="10dp"
                         android:src="@drawable/doctors"
                         tools:ignore="SpeakableTextPresentCheck" />
 
@@ -307,7 +314,7 @@
                         android:layout_marginBottom="4dp"
                         android:text="Doctors"
                         android:textAlignment="center"
-                        android:textSize="18dp"
+                        android:textSize="17dp"
                         android:textStyle="bold" />
 
                 </RelativeLayout>
@@ -338,7 +345,8 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:paddingBottom="5dp">
 
                     <ImageView
                         android:id="@+id/logoBlood"
@@ -348,7 +356,7 @@
                         android:layout_alignParentTop="true"
                         android:background="@drawable/pressed_selector"
                         android:onClick="bloodDonorsClick"
-                        android:padding="15dp"
+                        android:padding="10dp"
                         android:src="@drawable/blood"
                         tools:ignore="SpeakableTextPresentCheck" />
 
@@ -360,7 +368,7 @@
                         android:layout_marginBottom="4dp"
                         android:text="Blood Donors"
                         android:textAlignment="center"
-                        android:textSize="18dp"
+                        android:textSize="17dp"
                         android:textStyle="bold" />
 
                 </RelativeLayout>
@@ -380,7 +388,8 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:paddingBottom="5dp">
 
                     <ImageView
                         android:id="@+id/logoTourist"
@@ -390,7 +399,7 @@
                         android:layout_alignParentTop="true"
                         android:background="@drawable/pressed_selector"
                         android:onClick="touristSpotClick"
-                        android:padding="15dp"
+                        android:padding="10dp"
                         android:src="@drawable/tour"
                         tools:ignore="SpeakableTextPresentCheck" />
 
@@ -402,7 +411,7 @@
                         android:layout_marginBottom="4dp"
                         android:text="Tourist Spots"
                         android:textAlignment="center"
-                        android:textSize="18dp"
+                        android:textSize="17dp"
                         android:textStyle="bold" />
 
                 </RelativeLayout>
@@ -422,7 +431,8 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:paddingBottom="5dp">
 
                     <ImageView
                         android:id="@+id/logoHotel"
@@ -432,7 +442,7 @@
                         android:layout_alignParentTop="true"
                         android:background="@drawable/pressed_selector"
                         android:onClick="hotelsClick"
-                        android:padding="15dp"
+                        android:padding="10dp"
                         android:src="@drawable/hotel"
                         tools:ignore="SpeakableTextPresentCheck" />
 
@@ -444,7 +454,7 @@
                         android:layout_marginBottom="4dp"
                         android:text="Hotels"
                         android:textAlignment="center"
-                        android:textSize="18dp"
+                        android:textSize="17dp"
                         android:textStyle="bold" />
 
                 </RelativeLayout>
@@ -476,7 +486,8 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:paddingBottom="5dp">
 
                     <ImageView
                         android:id="@+id/logoRentCar"
@@ -486,7 +497,7 @@
                         android:layout_alignParentTop="true"
                         android:background="@drawable/pressed_selector"
                         android:onClick="rentACarClick"
-                        android:padding="15dp"
+                        android:padding="10dp"
                         android:src="@drawable/rentcar"
                         tools:ignore="SpeakableTextPresentCheck" />
 
@@ -498,7 +509,7 @@
                         android:layout_marginBottom="4dp"
                         android:text="Rent A car"
                         android:textAlignment="center"
-                        android:textSize="18dp"
+                        android:textSize="17dp"
                         android:textStyle="bold" />
 
                 </RelativeLayout>
@@ -518,7 +529,8 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:paddingBottom="5dp">
 
                     <ImageView
                         android:id="@+id/logoElectricity"
@@ -528,7 +540,7 @@
                         android:layout_alignParentTop="true"
                         android:background="@drawable/pressed_selector"
                         android:onClick="electricityClick"
-                        android:padding="15dp"
+                        android:padding="10dp"
                         android:src="@drawable/electricity"
                         tools:ignore="SpeakableTextPresentCheck" />
 
@@ -540,7 +552,7 @@
                         android:layout_marginBottom="4dp"
                         android:text="Electricity"
                         android:textAlignment="center"
-                        android:textSize="18dp"
+                        android:textSize="17dp"
                         android:textStyle="bold" />
 
                 </RelativeLayout>
@@ -560,7 +572,8 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:paddingBottom="5dp">
 
                     <ImageView
                         android:id="@+id/logoRestaurants"
@@ -570,7 +583,7 @@
                         android:layout_alignParentTop="true"
                         android:background="@drawable/pressed_selector"
                         android:onClick="aboutUsClick"
-                        android:padding="15dp"
+                        android:padding="10dp"
                         android:src="@drawable/aboutus"
                         tools:ignore="SpeakableTextPresentCheck" />
 
@@ -582,7 +595,7 @@
                         android:layout_marginBottom="4dp"
                         android:text="About Us"
                         android:textAlignment="center"
-                        android:textSize="18dp"
+                        android:textSize="17dp"
                         android:textStyle="bold" />
 
                 </RelativeLayout>
