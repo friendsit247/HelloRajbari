@@ -58,6 +58,56 @@
             android:text="Phone"
             android:textSize="17dp" />
 
+        <LinearLayout
+            android:id="@+id/extraLay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@+id/phoneTv"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_toEndOf="@+id/dialBtn"
+                android:text="Email"
+                android:textSize="20dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/nameTv"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_toEndOf="@+id/dialBtn"
+                android:text="Office"
+                android:textSize="17dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/titleTv"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="5dp"
+                android:layout_toEndOf="@+id/dialBtn"
+                android:textColor="@color/purple_500"
+                android:text="Address"
+                android:textSize="17dp" />
+
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/expandBtn"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_below="@+id/extraLay"
+            android:src="@drawable/ic_baseline_keyboard_arrow_down_24"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
     </RelativeLayout>
 
