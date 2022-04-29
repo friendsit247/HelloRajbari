@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">HelloRajbari</string>
+    <string name="empty_data">data that you want\nwill appear here soon</string>
 </resources>

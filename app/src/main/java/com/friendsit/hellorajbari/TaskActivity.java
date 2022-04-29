@@ -1,7 +1,5 @@
 package com.friendsit.hellorajbari;
 
-import static com.friendsit.hellorajbari.MainActivity.databaseReference;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SearchView;
@@ -25,11 +23,10 @@ import java.util.List;
 public class TaskActivity extends AppCompatActivity {
     private SearchView taskSv;
     private String State;
-    private LinearLayout adminLay;
+    private LinearLayout adminLay,msgLay;
     private String Cat;
     private List<HelloModel> list;
     private RecyclerView recycler;
-    private TextView msgTv;
     private HelloAdapter adapter;
 
     @Override
@@ -52,7 +49,7 @@ public class TaskActivity extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 if (snapshot.exists()){
-                    msgTv.setVisibility(View.GONE);
+                    msgLay.setVisibility(View.GONE);
                     recycler.setVisibility(View.VISIBLE);
                     list.clear();
                     for (DataSnapshot dataSnapshot : snapshot.getChildren()){
@@ -66,7 +63,7 @@ public class TaskActivity extends AppCompatActivity {
                     adapter.notifyDataSetChanged();
                 }else{
                     recycler.setVisibility(View.GONE);
-                    msgTv.setVisibility(View.VISIBLE);
+                    msgLay.setVisibility(View.VISIBLE);
                 }
             }
             @Override
@@ -81,7 +78,7 @@ public class TaskActivity extends AppCompatActivity {
         if (State!=null && !State.isEmpty()){
             if (State.equals("About")){
                 taskSv.setVisibility(View.GONE);
-                msgTv.setVisibility(View.GONE);
+                msgLay.setVisibility(View.GONE);
                 adminLay.setVisibility(View.VISIBLE);
             }
         }else{
@@ -95,6 +92,6 @@ public class TaskActivity extends AppCompatActivity {
         list = new ArrayList<>();
         recycler = findViewById(R.id.recycler);
         recycler.setLayoutManager(new LinearLayoutManager(TaskActivity.this));
-        msgTv = findViewById(R.id.msgTv);
+        msgLay = findViewById(R.id.msgLay);
     }
 }
