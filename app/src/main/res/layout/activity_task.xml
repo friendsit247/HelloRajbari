@@ -35,12 +35,24 @@
     </androidx.cardview.widget.CardView>
 
     <TextView
-        android:id="@+id/tv"
-        android:layout_centerInParent="true"
+        android:id="@+id/msgTv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textAlignment="center"
-        android:textSize="50dp"/>
+        android:layout_centerInParent="true"
+        android:text="Data that you want, will appear here shortly"
+        android:textSize="17dp"
+        android:textAlignment="center" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/homeSearch"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
+        android:visibility="gone"/>
 
     <LinearLayout
         android:id="@+id/adminLay"
