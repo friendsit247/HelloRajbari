@@ -32,7 +32,7 @@
             android:layout_marginTop="2dp"
             android:layout_toEndOf="@+id/dialBtn"
             android:text="Name"
-            android:textSize="20dp" />
+            android:textSize="17dp" />
 
         <TextView
             android:id="@+id/titleTv"
@@ -64,7 +64,9 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_below="@+id/phoneTv"
-            android:visibility="gone">
+            android:visibility="gone"
+            android:paddingHorizontal="10dp"
+            android:background="@color/teal_700">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -94,7 +96,6 @@
                 android:layout_marginTop="2dp"
                 android:layout_marginBottom="5dp"
                 android:layout_toEndOf="@+id/dialBtn"
-                android:textColor="@color/purple_500"
                 android:text="Address"
                 android:textSize="17dp" />
 
