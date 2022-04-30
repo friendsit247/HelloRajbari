@@ -36,7 +36,16 @@
 
     </androidx.cardview.widget.CardView>
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/homeRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/homeSearch"
+        android:layout_margin="10dp"
+        android:visibility="gone"/>
+
     <LinearLayout
+        android:id="@+id/btnLay"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_below="@+id/homeSearch"
