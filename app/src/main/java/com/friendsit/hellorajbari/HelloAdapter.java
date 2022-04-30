@@ -38,22 +38,7 @@ public class HelloAdapter extends RecyclerView.Adapter<HelloAdapter.HelloViewHol
     public void onBindViewHolder(@NonNull HelloViewHolder holder, int position) {
         holder.nameTv.setText(list.get(position).getNam());
         holder.titleTv.setText(list.get(position).getTit());
-        holder.phoneTv.setText("Phone: "+list.get(position).getPho());
-
-        if (list.get(position).getEma()!=null && !list.get(position).getEma().isEmpty()){
-           holder.emailTv.setVisibility(View.VISIBLE);
-           holder.emailTv.setText("Email: "+list.get(position).getEma());
-        }
-
-        if (list.get(position).getAdd()!=null && !list.get(position).getAdd().isEmpty()){
-            holder.addressTv.setVisibility(View.VISIBLE);
-            holder.addressTv.setText(list.get(position).getAdd());
-        }
-
-        if (list.get(position).getDet()!=null && !list.get(position).getDet().isEmpty()){
-            holder.detailsTv.setVisibility(View.VISIBLE);
-            holder.detailsTv.setText(list.get(position).getDet());
-        }
+        holder.phoneTv.setText(list.get(position).getPho());
 
         holder.dialBtn.setOnClickListener(view -> {
             dialBtnOnClick(list.get(position).getPho());
@@ -64,7 +49,7 @@ public class HelloAdapter extends RecyclerView.Adapter<HelloAdapter.HelloViewHol
         });
 
         holder.expandBtn.setOnClickListener(view -> {
-            expandBtnOnClick(holder);
+            expandBtnOnClick(holder,position);
         });
 
         holder.emailTv.setOnClickListener(view -> {
@@ -80,9 +65,24 @@ public class HelloAdapter extends RecyclerView.Adapter<HelloAdapter.HelloViewHol
         }
     }
 
-    private void expandBtnOnClick(HelloViewHolder holder) {
+    private void expandBtnOnClick(HelloViewHolder holder, int position) {
         if (holder.extraLay.getVisibility()==View.GONE){
             holder.extraLay.setVisibility(View.VISIBLE);
+
+            if (list.get(position).getEma()!=null && !list.get(position).getEma().isEmpty()){
+                holder.emailLay.setVisibility(View.VISIBLE);
+                holder.emailTv.setText(list.get(position).getEma());
+            }
+
+            if (list.get(position).getAdd()!=null && !list.get(position).getAdd().isEmpty()){
+                holder.addressTv.setVisibility(View.VISIBLE);
+                holder.addressTv.setText(list.get(position).getAdd());
+            }
+
+            if (list.get(position).getDet()!=null && !list.get(position).getDet().isEmpty()){
+                holder.detailsTv.setVisibility(View.VISIBLE);
+                holder.detailsTv.setText(list.get(position).getDet());
+            }
             holder.expandBtn.setImageResource(R.drawable.ic_baseline_keyboard_arrow_up_24);
         }else {
             holder.extraLay.setVisibility(View.GONE);
@@ -106,6 +106,8 @@ public class HelloAdapter extends RecyclerView.Adapter<HelloAdapter.HelloViewHol
         private FloatingActionButton dialBtn;
         private ImageButton expandBtn;
         private CardView extraLay;
+        private LinearLayout emailLay;
+
         public HelloViewHolder(@NonNull View itemView) {
             super(itemView);
             nameTv = itemView.findViewById(R.id.nameTv);
@@ -117,6 +119,7 @@ public class HelloAdapter extends RecyclerView.Adapter<HelloAdapter.HelloViewHol
             emailTv = itemView.findViewById(R.id.emailTv);
             addressTv = itemView.findViewById(R.id.addressTv);
             detailsTv = itemView.findViewById(R.id.detailsTv);
+            emailLay = itemView.findViewById(R.id.emailLay);
         }
     }
 }
