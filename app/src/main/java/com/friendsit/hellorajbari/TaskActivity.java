@@ -7,8 +7,12 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
+import android.content.pm.ApplicationInfo;
+import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -54,6 +58,24 @@ public class TaskActivity extends AppCompatActivity {
                 return true;
             }
         });
+    }
+
+
+
+    public void daudPhnClick(View view) {
+        phoneClickAction("+8801779808900");
+    }
+
+    public void daudEmailClick(View view) {
+        emailClickAction("daudhrimon@gmail.com");
+    }
+
+    public void polokPhnClick(View view) {
+        phoneClickAction("+8801911866613");
+    }
+
+    public void polokEmailClick(View view) {
+        emailClickAction("hello@jrpolok.com");
     }
 
     private void searchMethod(String newText) {
@@ -124,6 +146,20 @@ public class TaskActivity extends AppCompatActivity {
     public void onBackPressed() {
         super.onBackPressed();
         finish();
+    }
+
+    private void phoneClickAction(String phone) {
+        Intent intent = new Intent(Intent.ACTION_DIAL);
+        intent.setData(Uri.parse("tel:"+phone));
+        startActivity(intent);
+    }
+
+    private void emailClickAction(String email) {
+        Intent intent = new Intent(Intent.ACTION_SENDTO);
+        intent.setData(Uri.parse("mailto:"+email));
+        if (intent.resolveActivity(getPackageManager()) != null) {
+            startActivity(intent);
+        }
     }
 
     private void initial() {
