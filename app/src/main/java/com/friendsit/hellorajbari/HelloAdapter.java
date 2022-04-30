@@ -11,6 +11,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -104,7 +105,7 @@ public class HelloAdapter extends RecyclerView.Adapter<HelloAdapter.HelloViewHol
         private TextView nameTv,titleTv,phoneTv,emailTv,addressTv,detailsTv;
         private FloatingActionButton dialBtn;
         private ImageButton expandBtn;
-        private LinearLayout extraLay;
+        private CardView extraLay;
         public HelloViewHolder(@NonNull View itemView) {
             super(itemView);
             nameTv = itemView.findViewById(R.id.nameTv);

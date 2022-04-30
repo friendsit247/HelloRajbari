@@ -37,6 +37,8 @@ public class TaskActivity extends AppCompatActivity {
 
         initial();
 
+        taskSv.clearFocus();
+
         stateCheck();
 
         if (Cat!=null && !Cat.isEmpty()){
@@ -116,6 +118,12 @@ public class TaskActivity extends AppCompatActivity {
         }else{
             this.Cat = intent.getStringExtra("Cat");
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
     }
 
     private void initial() {

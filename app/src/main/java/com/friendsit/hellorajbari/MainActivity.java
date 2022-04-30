@@ -102,72 +102,84 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(MainActivity.this,TaskActivity.class);
         intent.putExtra("Cat","GovtOffice");
         startActivity(intent);
+        homeSv.clearFocus();
     }
 
     public void policeClick(View view) {
         Intent intent = new Intent(MainActivity.this,TaskActivity.class);
         intent.putExtra("Cat","Police");
         startActivity(intent);
+        homeSv.clearFocus();
     }
 
     public void hospitalClick(View view) {
         Intent intent = new Intent(MainActivity.this,TaskActivity.class);
         intent.putExtra("Cat","Hospital");
         startActivity(intent);
+        homeSv.clearFocus();
     }
 
     public void fireServiceClick(View view) {
         Intent intent = new Intent(MainActivity.this,TaskActivity.class);
         intent.putExtra("Cat","FireService");
         startActivity(intent);
+        homeSv.clearFocus();
     }
 
     public void ambulanceClick(View view) {
         Intent intent = new Intent(MainActivity.this,TaskActivity.class);
         intent.putExtra("Cat","Ambulance");
         startActivity(intent);
+        homeSv.clearFocus();
     }
 
     public void doctorsClick(View view) {
         Intent intent = new Intent(MainActivity.this,TaskActivity.class);
         intent.putExtra("Cat","Doctors");
         startActivity(intent);
+        homeSv.clearFocus();
     }
 
     public void bloodDonorsClick(View view) {
         Intent intent = new Intent(MainActivity.this,TaskActivity.class);
         intent.putExtra("Cat","BloodDonors");
         startActivity(intent);
+        homeSv.clearFocus();
     }
 
     public void touristSpotClick(View view) {
         Intent intent = new Intent(MainActivity.this,TaskActivity.class);
         intent.putExtra("Cat","TouristSpots");
         startActivity(intent);
+        homeSv.clearFocus();
     }
 
     public void hotelsClick(View view) {
         Intent intent = new Intent(MainActivity.this,TaskActivity.class);
         intent.putExtra("Cat","Hotels");
         startActivity(intent);
+        homeSv.clearFocus();
     }
 
     public void rentACarClick(View view) {
         Intent intent = new Intent(MainActivity.this,TaskActivity.class);
         intent.putExtra("Cat","RentACar");
         startActivity(intent);
+        homeSv.clearFocus();
     }
 
     public void electricityClick(View view) {
         Intent intent = new Intent(MainActivity.this,TaskActivity.class);
         intent.putExtra("Cat","Electricity");
         startActivity(intent);
+        homeSv.clearFocus();
     }
 
     public void aboutUsClick(View view) {
         Intent intent = new Intent(MainActivity.this,TaskActivity.class);
         intent.putExtra("State","About");
         startActivity(intent);
+        homeSv.clearFocus();
     }
 
     private void initial() {
