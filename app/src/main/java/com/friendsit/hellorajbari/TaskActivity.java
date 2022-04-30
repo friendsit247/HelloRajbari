@@ -28,11 +28,12 @@ import java.util.Locale;
 public class TaskActivity extends AppCompatActivity {
     private SearchView taskSv;
     private String State;
-    private LinearLayout adminLay,msgLay;
+    private LinearLayout adminLay, msgLay;
     private String Cat;
     private List<HelloModel> list;
     private RecyclerView recycler;
     private HelloAdapter adapter;
+    private TextView devTv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,13 +46,16 @@ public class TaskActivity extends AppCompatActivity {
 
         stateCheck();
 
-        if (Cat!=null && !Cat.isEmpty()){
+        if (Cat != null && !Cat.isEmpty()) {
             retriveAndShow();
         }
 
         taskSv.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
-            public boolean onQueryTextSubmit(String query) { return false; }
+            public boolean onQueryTextSubmit(String query) {
+                return false;
+            }
+
             @Override
             public boolean onQueryTextChange(String newText) {
                 searchMethod(newText);
@@ -59,7 +63,6 @@ public class TaskActivity extends AppCompatActivity {
             }
         });
     }
-
 
 
     public void daudPhnClick(View view) {
@@ -80,20 +83,20 @@ public class TaskActivity extends AppCompatActivity {
 
     private void searchMethod(String newText) {
         List<HelloModel> searchList = new ArrayList<>();
-        if (!newText.isEmpty()){
+        if (!newText.isEmpty()) {
             searchList.clear();
-            for (int i=0; i < list.size(); i++){
-                if (list.get(i).getNam().toLowerCase(Locale.ROOT).contains(newText)||
-                        list.get(i).getTit().toLowerCase(Locale.ROOT).contains(newText)||
-                        list.get(i).getPho().contains(newText)){
+            for (int i = 0; i < list.size(); i++) {
+                if (list.get(i).getNam().toLowerCase(Locale.ROOT).contains(newText) ||
+                        list.get(i).getTit().toLowerCase(Locale.ROOT).contains(newText) ||
+                        list.get(i).getPho().contains(newText)) {
                     searchList.add(list.get(i));
                 }
             }
-            adapter = new HelloAdapter(TaskActivity.this,searchList);
+            adapter = new HelloAdapter(TaskActivity.this, searchList);
             recycler.setAdapter(adapter);
             adapter.notifyDataSetChanged();
-        }else{
-            adapter = new HelloAdapter(TaskActivity.this,list);
+        } else {
+            adapter = new HelloAdapter(TaskActivity.this, list);
             recycler.setAdapter(adapter);
             adapter.notifyDataSetChanged();
         }
@@ -104,26 +107,28 @@ public class TaskActivity extends AppCompatActivity {
         dataRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                if (snapshot.exists()){
+                if (snapshot.exists()) {
                     msgLay.setVisibility(View.GONE);
                     recycler.setVisibility(View.VISIBLE);
                     list.clear();
-                    for (DataSnapshot dataSnapshot : snapshot.getChildren()){
-                        if (dataSnapshot.exists()){
+                    for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
+                        if (dataSnapshot.exists()) {
                             HelloModel helloModel = dataSnapshot.getValue(HelloModel.class);
                             list.add(helloModel);
                         }
                     }
-                    adapter = new HelloAdapter(TaskActivity.this,list);
+                    adapter = new HelloAdapter(TaskActivity.this, list);
                     recycler.setAdapter(adapter);
                     adapter.notifyDataSetChanged();
-                }else{
+                } else {
                     recycler.setVisibility(View.GONE);
                     msgLay.setVisibility(View.VISIBLE);
                 }
             }
+
             @Override
-            public void onCancelled(@NonNull DatabaseError error) { }
+            public void onCancelled(@NonNull DatabaseError error) {
+            }
         });
 
     }
@@ -131,13 +136,14 @@ public class TaskActivity extends AppCompatActivity {
     private void stateCheck() {
         Intent intent = getIntent();
         this.State = intent.getStringExtra("State");
-        if (State!=null && !State.isEmpty()){
-            if (State.equals("About")){
+        if (State != null && !State.isEmpty()) {
+            if (State.equals("About")) {
                 taskSv.setVisibility(View.GONE);
                 msgLay.setVisibility(View.GONE);
                 adminLay.setVisibility(View.VISIBLE);
+                devTv.setVisibility(View.VISIBLE);
             }
-        }else{
+        } else {
             this.Cat = intent.getStringExtra("Cat");
         }
     }
@@ -150,13 +156,13 @@ public class TaskActivity extends AppCompatActivity {
 
     private void phoneClickAction(String phone) {
         Intent intent = new Intent(Intent.ACTION_DIAL);
-        intent.setData(Uri.parse("tel:"+phone));
+        intent.setData(Uri.parse("tel:" + phone));
         startActivity(intent);
     }
 
     private void emailClickAction(String email) {
         Intent intent = new Intent(Intent.ACTION_SENDTO);
-        intent.setData(Uri.parse("mailto:"+email));
+        intent.setData(Uri.parse("mailto:" + email));
         if (intent.resolveActivity(getPackageManager()) != null) {
             startActivity(intent);
         }
@@ -169,5 +175,6 @@ public class TaskActivity extends AppCompatActivity {
         recycler = findViewById(R.id.recycler);
         recycler.setLayoutManager(new LinearLayoutManager(TaskActivity.this));
         msgLay = findViewById(R.id.msgLay);
+        devTv = findViewById(R.id.devTv);
     }
 }

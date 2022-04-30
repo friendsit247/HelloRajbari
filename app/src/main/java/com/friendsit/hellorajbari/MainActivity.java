@@ -42,7 +42,10 @@ public class MainActivity extends AppCompatActivity {
 
         homeSv.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
-            public boolean onQueryTextSubmit(String query) { return false; }
+            public boolean onQueryTextSubmit(String query) {
+                return false;
+            }
+
             @Override
             public boolean onQueryTextChange(String newText) {
                 homeSearchMethod(newText);
@@ -53,21 +56,21 @@ public class MainActivity extends AppCompatActivity {
 
     private void homeSearchMethod(String newText) {
         List<HelloModel> searchList = new ArrayList<>();
-        if (!newText.isEmpty()){
+        if (!newText.isEmpty()) {
             searchList.clear();
-            for (int i=0; i < list.size(); i++){
-                if (list.get(i).getNam().toLowerCase(Locale.ROOT).contains(newText)||
-                        list.get(i).getTit().toLowerCase(Locale.ROOT).contains(newText)||
-                        list.get(i).getPho().contains(newText)){
+            for (int i = 0; i < list.size(); i++) {
+                if (list.get(i).getNam().toLowerCase(Locale.ROOT).contains(newText) ||
+                        list.get(i).getTit().toLowerCase(Locale.ROOT).contains(newText) ||
+                        list.get(i).getPho().contains(newText)) {
                     searchList.add(list.get(i));
                 }
             }
-            adapter = new HelloAdapter(MainActivity.this,searchList);
+            adapter = new HelloAdapter(MainActivity.this, searchList);
             btnLay.setVisibility(View.GONE);
             homeRecycler.setVisibility(View.VISIBLE);
             homeRecycler.setAdapter(adapter);
             adapter.notifyDataSetChanged();
-        }else{
+        } else {
             homeRecycler.setVisibility(View.GONE);
             btnLay.setVisibility(View.VISIBLE);
         }
@@ -77,12 +80,12 @@ public class MainActivity extends AppCompatActivity {
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                if (snapshot.exists()){
+                if (snapshot.exists()) {
                     list.clear();
-                    for (DataSnapshot dataSnapshot : snapshot.getChildren()){
-                        if (dataSnapshot.exists()){
-                            for (DataSnapshot eachSnap : dataSnapshot.getChildren()){
-                                if (eachSnap.exists()){
+                    for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
+                        if (dataSnapshot.exists()) {
+                            for (DataSnapshot eachSnap : dataSnapshot.getChildren()) {
+                                if (eachSnap.exists()) {
                                     HelloModel helloModel = eachSnap.getValue(HelloModel.class);
                                     list.add(helloModel);
                                 }
@@ -92,92 +95,94 @@ public class MainActivity extends AppCompatActivity {
                 }
 
             }
+
             @Override
-            public void onCancelled(@NonNull DatabaseError error) { }
+            public void onCancelled(@NonNull DatabaseError error) {
+            }
         });
 
     }
 
     public void govtOfficeClick(View view) {
-        Intent intent = new Intent(MainActivity.this,TaskActivity.class);
-        intent.putExtra("Cat","GovtOffice");
+        Intent intent = new Intent(MainActivity.this, TaskActivity.class);
+        intent.putExtra("Cat", "GovtOffice");
         startActivity(intent);
         homeSv.clearFocus();
     }
 
     public void policeClick(View view) {
-        Intent intent = new Intent(MainActivity.this,TaskActivity.class);
-        intent.putExtra("Cat","Police");
+        Intent intent = new Intent(MainActivity.this, TaskActivity.class);
+        intent.putExtra("Cat", "Police");
         startActivity(intent);
         homeSv.clearFocus();
     }
 
     public void hospitalClick(View view) {
-        Intent intent = new Intent(MainActivity.this,TaskActivity.class);
-        intent.putExtra("Cat","Hospital");
+        Intent intent = new Intent(MainActivity.this, TaskActivity.class);
+        intent.putExtra("Cat", "Hospital");
         startActivity(intent);
         homeSv.clearFocus();
     }
 
     public void fireServiceClick(View view) {
-        Intent intent = new Intent(MainActivity.this,TaskActivity.class);
-        intent.putExtra("Cat","FireService");
+        Intent intent = new Intent(MainActivity.this, TaskActivity.class);
+        intent.putExtra("Cat", "FireService");
         startActivity(intent);
         homeSv.clearFocus();
     }
 
     public void ambulanceClick(View view) {
-        Intent intent = new Intent(MainActivity.this,TaskActivity.class);
-        intent.putExtra("Cat","Ambulance");
+        Intent intent = new Intent(MainActivity.this, TaskActivity.class);
+        intent.putExtra("Cat", "Ambulance");
         startActivity(intent);
         homeSv.clearFocus();
     }
 
     public void doctorsClick(View view) {
-        Intent intent = new Intent(MainActivity.this,TaskActivity.class);
-        intent.putExtra("Cat","Doctors");
+        Intent intent = new Intent(MainActivity.this, TaskActivity.class);
+        intent.putExtra("Cat", "Doctors");
         startActivity(intent);
         homeSv.clearFocus();
     }
 
     public void bloodDonorsClick(View view) {
-        Intent intent = new Intent(MainActivity.this,TaskActivity.class);
-        intent.putExtra("Cat","BloodDonors");
+        Intent intent = new Intent(MainActivity.this, TaskActivity.class);
+        intent.putExtra("Cat", "BloodDonors");
         startActivity(intent);
         homeSv.clearFocus();
     }
 
     public void touristSpotClick(View view) {
-        Intent intent = new Intent(MainActivity.this,TaskActivity.class);
-        intent.putExtra("Cat","TouristSpots");
+        Intent intent = new Intent(MainActivity.this, TaskActivity.class);
+        intent.putExtra("Cat", "TouristSpots");
         startActivity(intent);
         homeSv.clearFocus();
     }
 
     public void hotelsClick(View view) {
-        Intent intent = new Intent(MainActivity.this,TaskActivity.class);
-        intent.putExtra("Cat","Hotels");
+        Intent intent = new Intent(MainActivity.this, TaskActivity.class);
+        intent.putExtra("Cat", "Hotels");
         startActivity(intent);
         homeSv.clearFocus();
     }
 
     public void rentACarClick(View view) {
-        Intent intent = new Intent(MainActivity.this,TaskActivity.class);
-        intent.putExtra("Cat","RentACar");
+        Intent intent = new Intent(MainActivity.this, TaskActivity.class);
+        intent.putExtra("Cat", "RentACar");
         startActivity(intent);
         homeSv.clearFocus();
     }
 
     public void electricityClick(View view) {
-        Intent intent = new Intent(MainActivity.this,TaskActivity.class);
-        intent.putExtra("Cat","Electricity");
+        Intent intent = new Intent(MainActivity.this, TaskActivity.class);
+        intent.putExtra("Cat", "Electricity");
         startActivity(intent);
         homeSv.clearFocus();
     }
 
     public void aboutUsClick(View view) {
-        Intent intent = new Intent(MainActivity.this,TaskActivity.class);
-        intent.putExtra("State","About");
+        Intent intent = new Intent(MainActivity.this, TaskActivity.class);
+        intent.putExtra("State", "About");
         startActivity(intent);
         homeSv.clearFocus();
     }

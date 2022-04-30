@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/rajbari"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context=".SplashActivity"
-    android:background="@drawable/rajbari">
+    tools:context=".SplashActivity">
 
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/animation_view"
@@ -20,12 +20,12 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="10dp"
         android:text="Hello Rajbari"
         android:textAlignment="center"
-        android:textSize="25dp"
-        android:layout_margin="10dp"
         android:textColor="#FF1200"
-        android:textStyle="bold"/>
+        android:textSize="25dp"
+        android:textStyle="bold" />
 
 </LinearLayout>
 
