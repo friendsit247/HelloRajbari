@@ -37,15 +37,46 @@ public class HelloAdapter extends RecyclerView.Adapter<HelloAdapter.HelloViewHol
     public void onBindViewHolder(@NonNull HelloViewHolder holder, int position) {
         holder.nameTv.setText(list.get(position).getNam());
         holder.titleTv.setText(list.get(position).getTit());
-        holder.phoneTv.setText(list.get(position).getPho());
+        holder.phoneTv.setText("Phone: "+list.get(position).getPho());
+
+        if (list.get(position).getEma()!=null && !list.get(position).getEma().isEmpty()){
+           holder.emailTv.setVisibility(View.VISIBLE);
+           holder.emailTv.setText("Email: "+list.get(position).getEma());
+        }
+
+        if (list.get(position).getAdd()!=null && !list.get(position).getAdd().isEmpty()){
+            holder.addressTv.setVisibility(View.VISIBLE);
+            holder.addressTv.setText(list.get(position).getAdd());
+        }
+
+        if (list.get(position).getDet()!=null && !list.get(position).getDet().isEmpty()){
+            holder.detailsTv.setVisibility(View.VISIBLE);
+            holder.detailsTv.setText(list.get(position).getDet());
+        }
 
         holder.dialBtn.setOnClickListener(view -> {
+            dialBtnOnClick(list.get(position).getPho());
+        });
+
+        holder.phoneTv.setOnClickListener(view -> {
             dialBtnOnClick(list.get(position).getPho());
         });
 
         holder.expandBtn.setOnClickListener(view -> {
             expandBtnOnClick(holder);
         });
+
+        holder.emailTv.setOnClickListener(view -> {
+            emailOnClick(list.get(position).getEma());
+        });
+    }
+
+    private void emailOnClick(String email) {
+        Intent intent = new Intent(Intent.ACTION_SENDTO);
+        intent.setData(Uri.parse("mailto:"+email));
+        if (intent.resolveActivity(context.getPackageManager()) != null) {
+            context.startActivity(intent);
+        }
     }
 
     private void expandBtnOnClick(HelloViewHolder holder) {
@@ -70,7 +101,7 @@ public class HelloAdapter extends RecyclerView.Adapter<HelloAdapter.HelloViewHol
     }
 
     public class HelloViewHolder extends RecyclerView.ViewHolder {
-        private TextView nameTv,titleTv,phoneTv;
+        private TextView nameTv,titleTv,phoneTv,emailTv,addressTv,detailsTv;
         private FloatingActionButton dialBtn;
         private ImageButton expandBtn;
         private LinearLayout extraLay;
@@ -82,6 +113,9 @@ public class HelloAdapter extends RecyclerView.Adapter<HelloAdapter.HelloViewHol
             dialBtn = itemView.findViewById(R.id.dialBtn);
             expandBtn = itemView.findViewById(R.id.expandBtn);
             extraLay = itemView.findViewById(R.id.extraLay);
+            emailTv = itemView.findViewById(R.id.emailTv);
+            addressTv = itemView.findViewById(R.id.addressTv);
+            detailsTv = itemView.findViewById(R.id.detailsTv);
         }
     }
 }

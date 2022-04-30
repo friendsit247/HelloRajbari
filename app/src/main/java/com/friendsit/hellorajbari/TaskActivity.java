@@ -19,6 +19,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 public class TaskActivity extends AppCompatActivity {
     private SearchView taskSv;
@@ -40,6 +41,37 @@ public class TaskActivity extends AppCompatActivity {
 
         if (Cat!=null && !Cat.isEmpty()){
             retriveAndShow();
+        }
+
+        taskSv.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) { return false; }
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                searchMethod(newText);
+                return true;
+            }
+        });
+    }
+
+    private void searchMethod(String newText) {
+        List<HelloModel> searchList = new ArrayList<>();
+        if (!newText.isEmpty()){
+            searchList.clear();
+            for (int i=0; i < list.size(); i++){
+                if (list.get(i).getNam().toLowerCase(Locale.ROOT).contains(newText)||
+                        list.get(i).getTit().toLowerCase(Locale.ROOT).contains(newText)||
+                        list.get(i).getPho().contains(newText)){
+                    searchList.add(list.get(i));
+                }
+            }
+            adapter = new HelloAdapter(TaskActivity.this,searchList);
+            recycler.setAdapter(adapter);
+            adapter.notifyDataSetChanged();
+        }else{
+            adapter = new HelloAdapter(TaskActivity.this,list);
+            recycler.setAdapter(adapter);
+            adapter.notifyDataSetChanged();
         }
     }
 

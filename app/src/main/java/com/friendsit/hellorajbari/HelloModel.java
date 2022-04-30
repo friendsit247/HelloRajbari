@@ -6,20 +6,18 @@ public class HelloModel {
     private String Det;
     private String Ema;
     private String Nam;
-    private String Off;
     private String Pho;
     private String Tit;
 
     public HelloModel() {
     }
 
-    public HelloModel(String add, String cat, String det, String ema, String nam, String off, String pho, String tit) {
+    public HelloModel(String add, String cat, String det, String ema, String nam, String pho, String tit) {
         Add = add;
         Cat = cat;
         Det = det;
         Ema = ema;
         Nam = nam;
-        Off = off;
         Pho = pho;
         Tit = tit;
     }
@@ -62,14 +60,6 @@ public class HelloModel {
 
     public void setNam(String nam) {
         Nam = nam;
-    }
-
-    public String getOff() {
-        return Off;
-    }
-
-    public void setOff(String off) {
-        Off = off;
     }
 
     public String getPho() {
