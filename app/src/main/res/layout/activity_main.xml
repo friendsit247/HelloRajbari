@@ -65,16 +65,16 @@
                 android:id="@+id/govtOffice"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_margin="7dp"
+                android:layout_margin="5dp"
                 android:layout_weight="1"
                 android:elevation="5dp"
-                app:cardCornerRadius="10dp">
+                app:cardCornerRadius="20dp">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical"
-                    android:paddingBottom="5dp">
+                    android:paddingBottom="7dp">
 
                     <ImageView
                         android:id="@+id/logoGovt"
@@ -84,8 +84,8 @@
                         android:layout_alignParentTop="true"
                         android:background="@drawable/iv_selector"
                         android:onClick="govtOfficeClick"
-                        android:padding="10dp"
-                        android:src="@drawable/govt"
+                        android:padding="20dp"
+                        android:src="@drawable/office"
                         tools:ignore="SpeakableTextPresentCheck" />
 
                     <TextView
@@ -108,16 +108,16 @@
                 android:id="@+id/police"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_margin="7dp"
+                android:layout_margin="5dp"
                 android:layout_weight="1"
                 android:elevation="5dp"
-                app:cardCornerRadius="10dp">
+                app:cardCornerRadius="20dp">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical"
-                    android:paddingBottom="5dp">
+                    android:paddingBottom="7dp">
 
                     <ImageView
                         android:id="@+id/logoPolice"
@@ -127,7 +127,7 @@
                         android:layout_alignParentTop="true"
                         android:background="@drawable/iv_selector"
                         android:onClick="policeClick"
-                        android:padding="10dp"
+                        android:padding="20dp"
                         android:src="@drawable/police"
                         tools:ignore="SpeakableTextPresentCheck" />
 
@@ -151,16 +151,16 @@
                 android:id="@+id/hospital"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_margin="7dp"
+                android:layout_margin="5dp"
                 android:layout_weight="1"
                 android:elevation="5dp"
-                app:cardCornerRadius="10dp">
+                app:cardCornerRadius="20dp">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical"
-                    android:paddingBottom="5dp">
+                    android:paddingBottom="7dp">
 
                     <ImageView
                         android:id="@+id/logoHospital"
@@ -170,7 +170,7 @@
                         android:layout_alignParentTop="true"
                         android:background="@drawable/iv_selector"
                         android:onClick="hospitalClick"
-                        android:padding="10dp"
+                        android:padding="20dp"
                         android:src="@drawable/hospital"
                         tools:ignore="SpeakableTextPresentCheck" />
 
@@ -206,16 +206,16 @@
                 android:id="@+id/fireService"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_margin="7dp"
+                android:layout_margin="5dp"
                 android:layout_weight="1"
                 android:elevation="5dp"
-                app:cardCornerRadius="10dp">
+                app:cardCornerRadius="20dp">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical"
-                    android:paddingBottom="5dp">
+                    android:paddingBottom="7dp">
 
                     <ImageView
                         android:id="@+id/logoFire"
@@ -225,8 +225,8 @@
                         android:layout_alignParentTop="true"
                         android:background="@drawable/iv_selector"
                         android:onClick="fireServiceClick"
-                        android:padding="10dp"
-                        android:src="@drawable/fireservices"
+                        android:padding="20dp"
+                        android:src="@drawable/fire_truck"
                         tools:ignore="SpeakableTextPresentCheck" />
 
                     <TextView
@@ -249,16 +249,16 @@
                 android:id="@+id/ambulance"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_margin="7dp"
+                android:layout_margin="5dp"
                 android:layout_weight="1"
                 android:elevation="5dp"
-                app:cardCornerRadius="10dp">
+                app:cardCornerRadius="20dp">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical"
-                    android:paddingBottom="5dp">
+                    android:paddingBottom="7dp">
 
                     <ImageView
                         android:id="@+id/logoAmbulance"
@@ -268,7 +268,7 @@
                         android:layout_alignParentTop="true"
                         android:background="@drawable/iv_selector"
                         android:onClick="ambulanceClick"
-                        android:padding="10dp"
+                        android:padding="20dp"
                         android:src="@drawable/ambulance"
                         tools:ignore="SpeakableTextPresentCheck" />
 
@@ -292,16 +292,16 @@
                 android:id="@+id/doctors"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_margin="7dp"
+                android:layout_margin="5dp"
                 android:layout_weight="1"
                 android:elevation="5dp"
-                app:cardCornerRadius="10dp">
+                app:cardCornerRadius="20dp">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical"
-                    android:paddingBottom="5dp">
+                    android:paddingBottom="7dp">
 
                     <ImageView
                         android:id="@+id/logoDoctors"
@@ -311,8 +311,8 @@
                         android:layout_alignParentTop="true"
                         android:background="@drawable/iv_selector"
                         android:onClick="doctorsClick"
-                        android:padding="10dp"
-                        android:src="@drawable/doctors"
+                        android:padding="20dp"
+                        android:src="@drawable/doctor"
                         tools:ignore="SpeakableTextPresentCheck" />
 
                     <TextView
@@ -346,16 +346,16 @@
                 android:id="@+id/bloodDonors"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_margin="7dp"
+                android:layout_margin="5dp"
                 android:layout_weight="1"
                 android:elevation="5dp"
-                app:cardCornerRadius="10dp">
+                app:cardCornerRadius="20dp">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical"
-                    android:paddingBottom="5dp">
+                    android:paddingBottom="7dp">
 
                     <ImageView
                         android:id="@+id/logoBlood"
@@ -365,7 +365,7 @@
                         android:layout_alignParentTop="true"
                         android:background="@drawable/iv_selector"
                         android:onClick="bloodDonorsClick"
-                        android:padding="10dp"
+                        android:padding="20dp"
                         android:src="@drawable/blood"
                         tools:ignore="SpeakableTextPresentCheck" />
 
@@ -389,16 +389,16 @@
                 android:id="@+id/tourist"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_margin="7dp"
+                android:layout_margin="5dp"
                 android:layout_weight="1"
                 android:elevation="5dp"
-                app:cardCornerRadius="10dp">
+                app:cardCornerRadius="20dp">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical"
-                    android:paddingBottom="5dp">
+                    android:paddingBottom="7dp">
 
                     <ImageView
                         android:id="@+id/logoTourist"
@@ -408,8 +408,8 @@
                         android:layout_alignParentTop="true"
                         android:background="@drawable/iv_selector"
                         android:onClick="touristSpotClick"
-                        android:padding="10dp"
-                        android:src="@drawable/tour"
+                        android:padding="20dp"
+                        android:src="@drawable/landscape"
                         tools:ignore="SpeakableTextPresentCheck" />
 
                     <TextView
@@ -432,16 +432,16 @@
                 android:id="@+id/hotels"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_margin="7dp"
+                android:layout_margin="5dp"
                 android:layout_weight="1"
                 android:elevation="5dp"
-                app:cardCornerRadius="10dp">
+                app:cardCornerRadius="20dp">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical"
-                    android:paddingBottom="5dp">
+                    android:paddingBottom="7dp">
 
                     <ImageView
                         android:id="@+id/logoHotel"
@@ -451,7 +451,7 @@
                         android:layout_alignParentTop="true"
                         android:background="@drawable/iv_selector"
                         android:onClick="hotelsClick"
-                        android:padding="10dp"
+                        android:padding="20dp"
                         android:src="@drawable/hotel"
                         tools:ignore="SpeakableTextPresentCheck" />
 
@@ -487,16 +487,16 @@
                 android:id="@+id/rentACar"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_margin="7dp"
+                android:layout_margin="5dp"
                 android:layout_weight="1"
                 android:elevation="5dp"
-                app:cardCornerRadius="10dp">
+                app:cardCornerRadius="20dp">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical"
-                    android:paddingBottom="5dp">
+                    android:paddingBottom="7dp">
 
                     <ImageView
                         android:id="@+id/logoRentCar"
@@ -506,8 +506,8 @@
                         android:layout_alignParentTop="true"
                         android:background="@drawable/iv_selector"
                         android:onClick="rentACarClick"
-                        android:padding="10dp"
-                        android:src="@drawable/rentcar"
+                        android:padding="20dp"
+                        android:src="@drawable/car_rent"
                         tools:ignore="SpeakableTextPresentCheck" />
 
                     <TextView
@@ -530,16 +530,16 @@
                 android:id="@+id/electricity"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_margin="7dp"
+                android:layout_margin="5dp"
                 android:layout_weight="1"
                 android:elevation="5dp"
-                app:cardCornerRadius="10dp">
+                app:cardCornerRadius="20dp">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical"
-                    android:paddingBottom="5dp">
+                    android:paddingBottom="7dp">
 
                     <ImageView
                         android:id="@+id/logoElectricity"
@@ -549,7 +549,7 @@
                         android:layout_alignParentTop="true"
                         android:background="@drawable/iv_selector"
                         android:onClick="electricityClick"
-                        android:padding="10dp"
+                        android:padding="20dp"
                         android:src="@drawable/electricity"
                         tools:ignore="SpeakableTextPresentCheck" />
 
@@ -573,16 +573,16 @@
                 android:id="@+id/restaurants"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_margin="7dp"
+                android:layout_margin="5dp"
                 android:layout_weight="1"
                 android:elevation="5dp"
-                app:cardCornerRadius="10dp">
+                app:cardCornerRadius="20dp">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical"
-                    android:paddingBottom="5dp">
+                    android:paddingBottom="7dp">
 
                     <ImageView
                         android:id="@+id/logoRestaurants"
@@ -592,8 +592,8 @@
                         android:layout_alignParentTop="true"
                         android:background="@drawable/iv_selector"
                         android:onClick="aboutUsClick"
-                        android:padding="10dp"
-                        android:src="@drawable/aboutus"
+                        android:padding="20dp"
+                        android:src="@drawable/group"
                         tools:ignore="SpeakableTextPresentCheck" />
 
                     <TextView

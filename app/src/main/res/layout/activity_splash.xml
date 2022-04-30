@@ -10,8 +10,8 @@
 
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/animation_view"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
         app:lottie_autoPlay="true"
         app:lottie_loop="true"
         app:lottie_rawRes="@raw/phone" />
@@ -21,9 +21,9 @@
         android:layout_height="wrap_content"
         android:text="Hello Rajbari"
         android:textAlignment="center"
-        android:textSize="23dp"
+        android:textSize="25dp"
         android:layout_margin="10dp"
-        android:textColor="#FF5722"
+        android:textColor="#FF1200"
         android:textStyle="bold"/>
 
 </LinearLayout>
