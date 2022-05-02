@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
@@ -59,9 +60,12 @@ public class HelloAdapter extends RecyclerView.Adapter<HelloAdapter.HelloViewHol
 
     private void emailOnClick(String email) {
         Intent intent = new Intent(Intent.ACTION_SENDTO);
-        intent.setData(Uri.parse("mailto:" + email));
+        intent.setData(Uri.parse("mailto:"));
+        intent.putExtra(Intent.EXTRA_EMAIL,new String[]{email});
         if (intent.resolveActivity(context.getPackageManager()) != null) {
             context.startActivity(intent);
+        }else {
+            Toast.makeText(context, "This Device doesn't have any Email sender app Installed", Toast.LENGTH_SHORT).show();
         }
     }
 
